@@ -4,17 +4,20 @@ export default function Textform(props) {
     const handleUPclick=()=>{
         //console.log("Uppercase Clicked");
         let newText=text.toUpperCase();
-        setText(newText)
+        setText(newText);
+        props.showAlert("Converted to Uppercase","success");
     }
     const handleLOclick=()=>{
         //console.log("Uppercase Clicked");
         let newText1=text.toLowerCase();
-        setText(newText1)
+        setText(newText1);
+        props.showAlert("Converted to Lowercase","success");
     }
 
     const handleCapitalise = () => {
         const finalSentence = text.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
         setText(finalSentence);
+        props.showAlert("Capitalized","success");
     };
 
 
