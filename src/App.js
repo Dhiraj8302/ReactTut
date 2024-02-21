@@ -13,17 +13,23 @@ function App() {
       msg:message,
       type:type
     })
+    setTimeout(()=>{
+      setAlert(null);
+
+    },1500);
   }
   const toggleMode =()=>{
     if(mode==='light'){
       setMode('dark');
       document.body.style.backgroundColor='#042743';
       showAlert("Dark Mode has been Enabled","success");
+      document.title='YoYO-Dark Mode'    //to set website heading/title
     }
     else{
       setMode('light');
       document.body.style.backgroundColor='white';
       showAlert("Switched to Light Mode","success");
+      document.title='YoYO-Light Mode'
     }
   }
   return (
